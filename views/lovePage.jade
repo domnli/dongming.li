@@ -1,0 +1,11 @@
+html
+	head
+		script(src='/static/lib/sea.js')
+		script.
+			seajs.config({
+					paths:{
+						"trajectory":"/static/trajectory"
+					}
+				});
+			seajs.use("/static/loveyou");
+	body

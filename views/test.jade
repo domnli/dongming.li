@@ -1,0 +1,12 @@
+html
+	head
+		script(src='/static/sea.js')
+		script.
+			seajs.use("random",function(random){
+					console.log(1);
+					throw "er";
+				});
+			seajs.use("cpi",function(cpi){
+				console.log(2);
+				});
+	body
