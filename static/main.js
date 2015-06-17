@@ -6,7 +6,6 @@ define(function(require,exprots,module){
 	var Motion = require("trajectory/motion"),
 		looper = require("trajectory/util/looper"),
 		qr = require("trajectory/pattern/qr/qr_100_3325"),
-		face = require("trajectory/pattern/face/face_400_30000"),
 		cpi = require("trajectory/util/cpi"),
 		hello = require("trajectory/pattern/hello/hello_260_75_500"),
 		random = require("trajectory/util/random");
