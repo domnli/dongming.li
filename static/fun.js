@@ -34,13 +34,13 @@ define(function(require,exprots,module){
 	}
 
 	function randomDest(atoms){
-		b²≤x²+y²≤a²
-		x*x<= a*a-y*y;
-		var mx,my,x,y,r1,r2;
-		(x-mx)*(x-mx) + (y-my)*(y-my) <= r2*r2
-		(x-mx)*(x-mx) + (y-my)*(y-my) >= r1*r1
-		(x-mx)*(x-mx) <= Math.pow(r2,2) - Math.pow((y-my),2)
-		x <= Math.sqrt(Math.pow(r2,2) - Math.pow((y-my),2)) + mx;
+		// b²≤x²+y²≤a²
+		// x*x<= a*a-y*y;
+		// var mx,my,x,y,r1,r2;
+		// (x-mx)*(x-mx) + (y-my)*(y-my) <= r2*r2
+		// (x-mx)*(x-mx) + (y-my)*(y-my) >= r1*r1
+		// (x-mx)*(x-mx) <= Math.pow(r2,2) - Math.pow((y-my),2)
+		// x <= Math.sqrt(Math.pow(r2,2) - Math.pow((y-my),2)) + mx;
 		for(var i=0;i<atoms.length;i++){
 			atoms[i].set('destination',{
 				x:random(0,canvas.width),
