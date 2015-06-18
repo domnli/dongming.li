@@ -28,4 +28,8 @@ app.get('/test',function(req,res){
 	res.render('test',{title:"can you see"});
 });
 
+app.get('/fun/liuyi',function(req,res){
+	res.render('fun',{title:"酷炫闪图"})
+});
+
 app.listen(80);
