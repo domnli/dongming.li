@@ -1,18 +1,18 @@
 var express = require('express'),
-	app  = express(),
-	urlUtil = require('url');
+	driving = require('./apps/driving/'),
+	main  = express();
 
 // view engine  - jade
-app.set('view engine','jade');
-app.set('views', __dirname + '/views');
+main.set('view engine','jade');
 
 // static directory
-app.use('/static',express.static(__dirname + '/static'));
+main.use('/static',express.static(__dirname + '/static'));
 
 // router
+main.use('/driving',driving);
 
 // GET
-app.get('/',function(req,res){
+main.get('/',function(req,res){
 	if(req.hostname == "iloverenyun.com"){
 		res.render('lovePage',{title:"can you see"});
 	}else{
@@ -20,16 +20,16 @@ app.get('/',function(req,res){
 	}
 });
 
-app.get('/xx',function(req,res){
+main.get('/xx',function(req,res){
 	res.render('lovePage',{title:"can you see"});
 });
 
-app.get('/test',function(req,res){
+main.get('/test',function(req,res){
 	res.render('test',{title:"can you see"});
 });
 
-app.get('/fun/liuyi',function(req,res){
+main.get('/fun/liuyi',function(req,res){
 	res.render('fun',{title:"酷炫闪图"})
 });
 
-app.listen(80);
+main.listen(80);

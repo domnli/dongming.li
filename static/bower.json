@@ -1,0 +1,19 @@
+{
+  "name": "static_bower",
+  "version": "0.0.0",
+  "authors": [
+    "domnli"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.4.3"
+  }
+}
