@@ -1,13 +1,32 @@
-html
+html(lang='en',ng-app='app')
 	head
-		script(src='/static/lib/sea.js')
-	body
-		script.
-			seajs.config({
-				paths:{
-					"trajectory":"/static/trajectory"
-				}
-			});
-			seajs.use("/static/main");
+		script(src='/static/lib/angularjs/angular.js')
+		script(src='/static/lib/ag-grid/dist/angular-grid.js')
+		link(href='/static/lib/ag-grid/dist/angular-grid.css',type='text/css',rel='stylesheet')
+		link(href='/static/lib/ag-grid/dist/theme-fresh.css',type='text/css',rel='stylesheet')
+		
+	body(ng-controller="appCtrl")
+		div(ag-grid="gridOptions",class='ag-fresh',style="height: 100%;")
+		
+	script.
+			var module = angular.module('app',['angularGrid']);
+			module.controller('appCtrl',function($scope){
+					var columnDefs = [
+				        {headerName: "Make", field: "make"},
+				        {headerName: "Model", field: "model"},
+				        {headerName: "Price", field: "price"}
+				    ];
 
+				    var rowData = [
+				        {make: "Toyota", model: "Celica", price: 35000},
+				        {make: "Ford", model: "Mondeo", price: 32000},
+				        {make: "Porsche", model: "Boxter", price: 72000}
+				    ];
+				    $scope.gridOptions={
+				    	columnDefs:columnDefs,
+				    	rowData:rowData,
+				    	dontUseScrolls:true
+				    };
+
+				});
 		
