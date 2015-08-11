@@ -6,7 +6,7 @@ html(lang='en',ng-app='app')
 		link(href='/static/lib/ag-grid/dist/theme-fresh.css',type='text/css',rel='stylesheet')
 		
 	body(ng-controller="appCtrl")
-		div(ag-grid="gridOptions",class='ag-fresh',style="height: 100%;")
+		div(ag-grid="gridOptions",class='ag-fresh')
 		
 	script.
 			var module = angular.module('app',['angularGrid']);
