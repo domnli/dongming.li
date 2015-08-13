@@ -16,7 +16,7 @@ html
 				function(Atom,Line,cpi,looper,shape){
 					var canvas = cpi.createCanvasFullScreen(),
 						ctx = canvas.getContext('2d'),
-						line = new Line({vel:10}),
+						line = new Line({vel:5}),
 						i=0,mousedown=false,mouseCoor;
 					shape.setOffset(canvas.width/2-shape.width/2,canvas.height/2-shape.height/2);
 					canvas.onmousedown=function(e){

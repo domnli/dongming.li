@@ -17,7 +17,6 @@ define(function(require,exports,module){
 		if(this.atoms){
 			for(var i = 0;i<this.atoms.length;i++){
 				var atom = this.atoms[i];
-				console.log(atom);
 				cpi.drawSolidCircle(ctx,atom.get("x"),atom.get("y"),atom.get('radius'),atom.get('rgba'));
 			}
 		}

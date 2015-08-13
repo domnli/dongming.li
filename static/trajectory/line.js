@@ -23,7 +23,6 @@ define(function(require,exports,module){
 		}
 
 		function add(atom,line){
-			console.log(line.atoms);
 			if(!(atom instanceof Atom) && atom.x && atom.y){
 				atom = new Atom(atom);
 			}
