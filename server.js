@@ -32,4 +32,8 @@ main.get('/fun/liuyi',function(req,res){
 	res.render('fun',{title:"酷炫闪图"})
 });
 
+main.get('/ingress',function(req,res){
+	res.render('enlightened',{title:"enlightened"});
+});
+
 main.listen(80);
