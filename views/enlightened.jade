@@ -1,17 +1,13 @@
 html
 	head
 		script(src='/static/lib/sea.js')
+		script(src='/static/trajectory.js')
 		script.
-			seajs.config({
-				paths:{
-					"trajectory":"/static/trajectory"
-				}
-			});
 			seajs.use(["trajectory/atom",
 						"trajectory/line",
 						"trajectory/util/cpi",
 						"trajectory/util/looper",
-						"trajectory/pattern/ingress/enlightened_461_615_2021"
+						"/static/trajectory/pattern/ingress/enlightened_461_615_2021"
 						],
 				function(Atom,Line,cpi,looper,shape){
 					var canvas = cpi.createCanvasFullScreen(),
